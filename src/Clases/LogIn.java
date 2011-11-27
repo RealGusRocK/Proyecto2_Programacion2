@@ -10,6 +10,8 @@
  */
 package Clases;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gustavo
@@ -17,7 +19,9 @@ package Clases;
 public class LogIn extends javax.swing.JFrame {
     
     /** Creates new form LogIn */
+    RegistrarUsuario reg=null;
     public LogIn() {
+        reg=new RegistrarUsuario();
         initComponents();
     }
 
@@ -36,11 +40,10 @@ public class LogIn extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txt_UserName = new javax.swing.JTextField();
         jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
+        bot_Crear = new javax.swing.JToggleButton();
         txt_Pass = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Clases/Imagenes/fondos-verdes-2291.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
@@ -49,11 +52,10 @@ public class LogIn extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 204, 0));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tele-Marines", 1, 24));
-        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setFont(new java.awt.Font("Tele-Marines", 1, 24)); // NOI18N
         jLabel1.setText("Face green");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(210, 40, 240, 23);
+        jLabel1.setBounds(240, 30, 240, 23);
 
         jLabel2.setFont(new java.awt.Font("Vineta BT", 0, 18));
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
@@ -73,7 +75,7 @@ public class LogIn extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txt_UserName);
-        txt_UserName.setBounds(180, 160, 220, 40);
+        txt_UserName.setBounds(180, 160, 220, 30);
 
         jToggleButton1.setText("Iniciar Sesion");
         jToggleButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -81,60 +83,72 @@ public class LogIn extends javax.swing.JFrame {
                 jToggleButton1MouseClicked(evt);
             }
         });
-        getContentPane().add(jToggleButton1);
-        jToggleButton1.setBounds(240, 270, 114, 39);
-
-        jToggleButton2.setText("Crear Nueva Cuenta");
-        jToggleButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jToggleButton2MouseClicked(evt);
-            }
-        });
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                jToggleButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton2);
-        jToggleButton2.setBounds(470, 190, 140, 30);
+        getContentPane().add(jToggleButton1);
+        jToggleButton1.setBounds(240, 270, 114, 30);
+
+        bot_Crear.setText("Crear Nueva Cuenta");
+        bot_Crear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bot_CrearMouseClicked(evt);
+            }
+        });
+        bot_Crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bot_CrearActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bot_Crear);
+        bot_Crear.setBounds(450, 190, 150, 30);
         getContentPane().add(txt_Pass);
-        txt_Pass.setBounds(180, 210, 220, 40);
+        txt_Pass.setBounds(180, 220, 220, 30);
         getContentPane().add(jLabel4);
         jLabel4.setBounds(695, 65, 0, 0);
 
         jLabel5.setText("No tienes Cuenta? Registrate AHORA!");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(450, 170, 190, 14);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Clases/Imagenes/silent-hill-downpour-detailed-20110124055445405.jpg"))); // NOI18N
-        jLabel7.setText("jLabel7");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(0, 10, 660, 440);
+        jLabel5.setBounds(430, 170, 230, 14);
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-679)/2, (screenSize.height-486)/2, 679, 486);
+        setBounds((screenSize.width-737)/2, (screenSize.height-500)/2, 737, 500);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt_UserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_UserNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_UserNameActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void bot_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_CrearActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_bot_CrearActionPerformed
 
-    private void jToggleButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton2MouseClicked
+    private void bot_CrearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bot_CrearMouseClicked
         CrearCuenta c=new CrearCuenta();
+        dispose();
         c.setVisible(true);
-    }//GEN-LAST:event_jToggleButton2MouseClicked
+       
+    }//GEN-LAST:event_bot_CrearMouseClicked
 
     private void jToggleButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton1MouseClicked
-        Profile p=new Profile();
         String correo=this.txt_UserName.getText();
+        //Profile p=new Profile(correo);
+        HomeFeed h=new HomeFeed(correo);
+        
         String pass=this.txt_Pass.getText();
         
-        p.setVisible(true);
+        if(reg.IniciarSesion(correo, pass)){
+            dispose();
+            h.setVisible(true);
+        }else
+            JOptionPane.showMessageDialog(this, "La Cuenta No existe.");
     }//GEN-LAST:event_jToggleButton1MouseClicked
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,15 +162,14 @@ public class LogIn extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton bot_Crear;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JPasswordField txt_Pass;
     private javax.swing.JTextField txt_UserName;
     // End of variables declaration//GEN-END:variables
