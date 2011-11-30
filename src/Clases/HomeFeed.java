@@ -18,9 +18,12 @@ public class HomeFeed extends javax.swing.JFrame {
 
     /** Creates new form HomeFeed */
     String perfil;
+    Posts p;
     public HomeFeed(String correo) {
+        p=new Posts(correo);
         perfil=correo;
         initComponents();
+        this.txt_postIn.setText(p.getPostIn());
     }
 
     /** This method is called from within the constructor to
@@ -39,7 +42,7 @@ public class HomeFeed extends javax.swing.JFrame {
         lbl_Perfil = new javax.swing.JLabel();
         lbl_salir = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txt_postIn = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -57,7 +60,7 @@ public class HomeFeed extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(51, 102, 255));
 
-        jLabel1.setFont(new java.awt.Font("Viner Hand ITC", 3, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Viner Hand ITC", 3, 24));
         jLabel1.setText("Home Feed");
 
         lbl_Perfil.setFont(new java.awt.Font("MS Mincho", 1, 12));
@@ -96,11 +99,11 @@ public class HomeFeed extends javax.swing.JFrame {
                 .addComponent(lbl_Perfil, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txt_postIn.setColumns(20);
+        txt_postIn.setRows(5);
+        jScrollPane1.setViewportView(txt_postIn);
 
-        jLabel3.setFont(new java.awt.Font("Vineta BT", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Vineta BT", 0, 14));
         jLabel3.setText("Actualizaciones Recientes ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -156,7 +159,7 @@ public class HomeFeed extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                new HomeFeed().setVisible(true);
+                new HomeFeed("").setVisible(true);
             }
         });
     }
@@ -167,8 +170,8 @@ public class HomeFeed extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lbl_Perfil;
     private javax.swing.JLabel lbl_salir;
+    private javax.swing.JTextArea txt_postIn;
     // End of variables declaration//GEN-END:variables
 }

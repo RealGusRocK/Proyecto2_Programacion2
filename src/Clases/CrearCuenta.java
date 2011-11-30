@@ -243,7 +243,7 @@ public class CrearCuenta extends javax.swing.JFrame {
         String a=(String) this.cmb_año.getSelectedItem();
         int mes=Integer.parseInt(m);
         int dia=Integer.parseInt(d);
-        int anio=Integer.parseInt(a);
+        int anio=Integer.parseInt(a)-1900;
         Date Nacimiento=new Date(anio,mes-1,dia);
         long fechaN=Nacimiento.getTime();
         String email=this.txt_email.getText();

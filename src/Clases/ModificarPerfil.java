@@ -39,7 +39,7 @@ public class ModificarPerfil extends javax.swing.JFrame {
         String n= o.toString();
         String r=""+n;
         System.out.println(r);
-        //this.txt_tel.setText(""+p.getTel());
+        this.txt_tel.setText(""+p.getTel());
         //this.cb_act.setSelected(true);
     }
 
@@ -60,7 +60,6 @@ public class ModificarPerfil extends javax.swing.JFrame {
         buttonGroup3 = new javax.swing.ButtonGroup();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextField1 = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
         txt_tel = new javax.swing.JTextPane();
         jLabel2 = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
@@ -76,23 +75,11 @@ public class ModificarPerfil extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         cb_act = new javax.swing.JCheckBox();
         cb_desa = new javax.swing.JCheckBox();
+        jPanel2 = new javax.swing.JPanel();
 
         jScrollPane1.setViewportView(jEditorPane1);
 
         jTextField1.setText("jTextField1");
-
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
-        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Modificar Perfil");
@@ -146,7 +133,7 @@ public class ModificarPerfil extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(298, 129, 19, 14);
 
-        jLabel7.setFont(new java.awt.Font("Lucida Calligraphy", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Lucida Calligraphy", 1, 18));
         jLabel7.setText("Modificar Perfil");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(152, 25, 172, 25);
@@ -188,6 +175,22 @@ public class ModificarPerfil extends javax.swing.JFrame {
         });
         getContentPane().add(cb_desa);
         cb_desa.setBounds(31, 217, 85, 23);
+
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 340, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 490, 340);
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
         setBounds((screenSize.width-503)/2, (screenSize.height-371)/2, 503, 371);
@@ -263,7 +266,7 @@ public class ModificarPerfil extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
